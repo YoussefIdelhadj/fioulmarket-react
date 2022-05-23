@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 // content of component
 function Button(props){
-    console.log(props);
     return (
         <button className={style.Button} 
                 onClick = {(event) => {
@@ -13,8 +12,9 @@ function Button(props){
                 
             }}
             style = {{
-                   backgroundColor: props.bgcolor ,
-                   color: props.color
+                    ...props.styleDuButton, 
+                    backgroundColor: props.bgcolor ,
+                    color: props.color
                 }}
 
             type= {props.type}
@@ -26,9 +26,17 @@ function Button(props){
 
 Button.propTypes = {
     bgcolor: PropTypes.string.isRequired,
+    styleDuButton: PropTypes.object,
     color: PropTypes.string.isRequired,
     onButtonClicked: PropTypes.func,
     type: PropTypes.string
+}
+
+Button.defaultProps = {
+    bgcolor: 'skyblue',
+    color: 'white',
+    type: 'button'
+
 }
 
 // exportation
