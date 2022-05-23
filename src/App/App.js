@@ -6,10 +6,9 @@ function App() {
     <div className="App">
       Youssef IDEL <br/>
 
-      <Button/>
-      <Button/>
-      <Button/>
-      <Button/>
+      <Button text="Hello"/>
+      <Button text="Button value"/>
+      <Button text="Click here"/>
     </div>
   );
 }

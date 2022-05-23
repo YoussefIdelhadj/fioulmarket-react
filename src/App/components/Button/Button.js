@@ -2,7 +2,7 @@ import React from "react";
 
 // content of component
 function Button(props){
-    return <button>Benjamin</button>;
+    return <button>{props.text}</button>;
 }
 
 // exportation
