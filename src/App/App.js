@@ -6,9 +6,13 @@ function App() {
     <div className="App">
       Youssef IDEL <br/>
 
-      <Button text="Hello"/>
-      <Button text="Button value"/>
-      <Button text="Click here"/>
+      <Button text="Hello" 
+        onButtonClicked={() => {console.log();}}
+        bgcolor = "tomato"
+        color = "green"
+        />
+      <Button text="Button value" onButtonClicked={() => {console.log();}}/>
+      <Button text="Click here" onButtonClicked={() => {console.log();}}/>
     </div>
   );
 }
